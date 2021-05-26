@@ -1,5 +1,7 @@
 package org.datastructure4j.tree;
 
+import java.util.Iterator;
+
 import org.datastructure4j.Position;
 
 /**
@@ -204,5 +206,17 @@ public class LinkedBinaryTree<E> extends AbstractBinaryTree<E> {
 		node.setRight(null);
 		node.setParent(node); // our convention for defunct node
 		return temp;
+	}
+
+	@Override
+	public Iterator<E> iterator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Iterable<Position<E>> positions() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 } // ----------- end of LinkedBinaryTree class -----------

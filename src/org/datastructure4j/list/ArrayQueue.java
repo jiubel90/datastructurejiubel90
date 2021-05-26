@@ -2,7 +2,10 @@ package org.datastructure4j.list;
 
 /** Implementation of the queue ADT using a fixed-length array. */
 public class ArrayQueue<E> implements Queue<E> {
+	
 	// instance variables
+	public static final int CAPACITY = 1000; // default arrayqueue capacity
+	
 	private E[] data; // generic array used for storage
 	private int f = 0; // index of the front element
 	private int sz = 0; // current number of elements

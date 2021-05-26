@@ -1,6 +1,7 @@
 package org.datastructure4j.tree;
 
 import org.datastructure4j.Position;
+import org.datastructure4j.list.ArrayList;
 
 /**
  * An abstract base class providing some functionality of the BinaryTree
@@ -32,7 +33,7 @@ public abstract class AbstractBinaryTree<E> extends AbstractTree<E> implements B
 	 * Returns an iterable collection of the Positions representing p's children.
 	 */
 	public Iterable<Position<E>> children(Position<E> p) {
-		List<Position<E>> snapshot = new List<Position<E>>(2); // max capacity of 2
+		List<Position<E>> snapshot = new ArrayList<>(2); // max capacity of 2
 		if (left(p) != null)
 			snapshot.add(left(p));
 		if (right(p) != null)
