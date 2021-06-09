@@ -1,5 +1,7 @@
 package org.datastructure4j.list;
 
+import java.util.Iterator;
+
 public class ArrayList<E> implements List<E> {
 	// instance variables
 	public static final int CAPACITY = 16; // default array capacity
@@ -73,6 +75,38 @@ public class ArrayList<E> implements List<E> {
 	protected void checkIndex(int i, int n) throws IndexOutOfBoundsException {
 		if (i < 0 || i >= n)
 			throw new IndexOutOfBoundsException("Illegal index: " + i);
+	}
+
+	@Override
+	public Iterator<E> iterator() {
+		return new Iterator<E>() {
+			private int count=0;
+			
+			@Override
+			public boolean hasNext() {
+				return count<size;
+			}
+
+			@Override
+			public E next() {
+				if(hasNext())
+					return data[count++];
+				else
+					throw new UnsupportedOperationException() ; 
+			}
+		};
+	}
+
+	@Override
+	public void add(E e) throws IndexOutOfBoundsException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void insert(int i, E e) throws IndexOutOfBoundsException {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

@@ -1,7 +1,7 @@
 package org.datastructure4j.list;
 
 /** A simplified version of the java.util.List interface. */
-public interface List<E> {
+public interface List<E> extends Iterable<E>{
 	/** Returns the number of elements in this list. */
 	int size();
 
@@ -15,12 +15,15 @@ public interface List<E> {
 	E set(int i, E e) throws IndexOutOfBoundsException;
 
 	/**
-	 * Inserts element e to be at index i, shifting all subsequent elements later.
+	 * Insert element to the final
 	 */
-	void add(int i, E e) throws IndexOutOfBoundsException;
-
+	void add(E e)throws IndexOutOfBoundsException;
 	/**
 	 * Removes/returns the element at index i, shifting subsequent elements earlier.
 	 */
 	E remove(int i) throws IndexOutOfBoundsException;
+	/**
+	 * Insert element to be at index i
+	 * */
+	void insert(int i, E e) throws IndexOutOfBoundsException;
 }
