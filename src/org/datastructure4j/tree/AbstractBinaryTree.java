@@ -2,10 +2,7 @@ package org.datastructure4j.tree;
 
 import org.datastructure4j.Position;
 import org.datastructure4j.list.ArrayList;
-//<<<<<<< HEAD
-//=======
 import org.datastructure4j.list.List;
-//>>>>>>> main
 
 /**
  * An abstract base class providing some functionality of the BinaryTree
